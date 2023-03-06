@@ -62,3 +62,19 @@ presentTime.addEventListener("click", function () {
   questions.classList.remove("hide")
   render(0)
 })
+function getQuestion() {
+  var currentQuestion = questions[currentQuestionIndex];
+  var titleEl = document.getElementById('question-title');
+  titleEl.textContent = currentQuestion.title;
+  choicesEl.innerHTML = '';
+  for (var i = 0; i < currentQuestion.choices.length; i++) {
+
+    var choice = currentQuestion.choices[i];
+    var choiceNode = document.createElement('button');
+    choiceNode.setAttribute('class', 'choice');
+    choiceNode.setAttribute('value', choice);
+
+    choiceNode.textContent = i + 1 + '. ' + choice;
+    choicesEl.appendChild(choiceNode);
+  }
+}
