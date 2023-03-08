@@ -11,7 +11,8 @@
 
 
 <body>
-  <a href="./highscores.hml">View Scores </a> <!--Highscore Link -->
+  <button id="high-scores-link">View Scores </button> <!--Highscore Link -->
+        <p id="timerEl"></p>
   <div id="wrapper">
     <div id="present time"></div> <!--Timer -->
     <!--questions-->
@@ -24,11 +25,11 @@
     </div>
     <div id="questions" class ="hide" >
 
-      <h1 id="questionTitle">Coding quiz</h1>
-      <ul id="choicesUl"></ul> <!--content-->
+      <h1 id="question-title"></h1>
+      <ul id="choicesEl"></ul> <!--content-->
       
 
-
+      <p id="feedback"></p>
     </div>
   </div>
   <script src="./script.js"></script>
